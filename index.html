@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>mumaps | Recommended tours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="intro" aria-labelledby="welcome-title">
+    <header class="intro__header">
+      <a class="brand" href="index.html" aria-label="mumaps home">
+        <span class="brand__letter">m</span><span class="brand__letter">u</span><span class="brand__letter brand__letter--round">m</span><span class="brand__letter brand__letter--round">a</span><span class="brand__letter brand__letter--round">p</span><span class="brand__letter brand__letter--round">s</span>
+      </a>
+    </header>
+
+    <section class="intro__content">
+      <p class="eyebrow">Your audio guide</p>
+      <h1 id="welcome-title">Let’s get started!</h1>
+      <p class="intro__description">Choose the language of your preference</p>
+
+      <form class="language-form" id="language-form">
+        <fieldset>
+          <legend class="sr-only">Choose a language</legend>
+          <button class="language-option" type="button" data-language="Français">Français</button>
+          <button class="language-option" type="button" data-language="Deutsch">Deutsch</button>
+          <button class="language-option" type="button" data-language="English">English</button>
+        </fieldset>
+        <p class="selection-status" id="selection-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="tours" aria-labelledby="tours-title" hidden>
+      <header class="tours__heading">
+        <h1 id="tours-title" tabindex="-1">Choose your tour:</h1>
+        <p>What are you curious about today?</p>
+      </header>
+
+      <div class="tour-list">
+        <button class="tour-card" type="button" data-tour="Museum Highlights" aria-pressed="false">
+          <span class="tour-card__details">
+            <strong>Museum Highlights</strong>
+            <span class="tour-card__meta"><span>50 min</span><span class="meta-dot" aria-hidden="true"></span><span class="headphones" aria-hidden="true"></span><span>12 stops</span></span>
+          </span>
+          <span class="tour-card__color tour-card__color--yellow" aria-hidden="true"></span>
+        </button>
+        <button class="tour-card" type="button" data-tour="Music Route" aria-pressed="false">
+          <span class="tour-card__details">
+            <strong>Music Route</strong>
+            <span class="tour-card__meta"><span>40 min</span><span class="meta-dot" aria-hidden="true"></span><span class="headphones" aria-hidden="true"></span><span>10 stops</span></span>
+          </span>
+          <span class="tour-card__color tour-card__color--pink" aria-hidden="true"></span>
+        </button>
+        <button class="tour-card" type="button" data-tour="Childrens Route" aria-pressed="false">
+          <span class="tour-card__details">
+            <strong>Childrens Route</strong>
+            <span class="tour-card__meta"><span>30 min</span><span class="meta-dot" aria-hidden="true"></span><span class="headphones" aria-hidden="true"></span><span>6 stops</span></span>
+          </span>
+          <span class="tour-card__color tour-card__color--green" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="tour-status" id="tour-status" aria-live="polite"></p>
+    </section>
+
+    <section class="highlights-view" aria-labelledby="highlights-title" hidden>
+      <h1 id="highlights-title" class="sr-only">Museum Highlights</h1>
+      <div class="highlights-image-wrap">
+        <img class="highlights-image" src="MM_highlights.png" alt="Museum Highlights tour with twelve stops" />
+        <button class="object-arrow object-arrow--watches" type="button" data-object="watches" style="--object-top: 12.4%;" aria-label="Open Watches"></button>
+        <button class="object-arrow" type="button" data-object="cylinder-music-boxes" style="--object-top: 19.7%;" aria-label="Open Cylinder Music Boxes"></button>
+        <button class="object-arrow" type="button" data-object="disc-music-boxes" style="--object-top: 26.9%;" aria-label="Open Disc Music Boxes"></button>
+        <button class="object-arrow" type="button" data-object="mechanical-birds" style="--object-top: 34.2%;" aria-label="Open Mechanical Birds"></button>
+        <button class="object-arrow" type="button" data-object="tabatiere" style="--object-top: 41.4%;" aria-label="Open Tabatiere"></button>
+        <button class="object-arrow" type="button" data-object="station-music-boxes" style="--object-top: 48.6%;" aria-label="Open Station Music Boxes"></button>
+        <button class="object-arrow" type="button" data-object="radio" style="--object-top: 55.8%;" aria-label="Open Radio"></button>
+        <button class="object-arrow" type="button" data-object="grammophone" style="--object-top: 63.1%;" aria-label="Open Grammophone"></button>
+        <button class="object-arrow" type="button" data-object="vinyl" style="--object-top: 70.3%;" aria-label="Open Vinyl"></button>
+        <button class="object-arrow" type="button" data-object="cameras" style="--object-top: 77.5%;" aria-label="Open Cameras"></button>
+        <button class="object-arrow" type="button" data-object="typewriters" style="--object-top: 84.7%;" aria-label="Open Typewriters"></button>
+        <button class="object-arrow" type="button" data-object="automatons" style="--object-top: 92%;" aria-label="Open Automatons"></button>
+      </div>
+    </section>
+
+    <section class="stop-view" aria-labelledby="stop-title" hidden>
+      <div class="watches-page" aria-labelledby="watches-title" hidden>
+        <h1 id="watches-title" tabindex="-1">Stop 1: Watches</h1>
+        <audio class="watches-audio" controls preload="none" aria-label="Play Watches audio guide">
+          <source src="Chapter%201%20Clocks%20AUDIO/ElevenLabs_MuMaps_01.mp3" type="audio/mpeg">
+          Your browser does not support audio playback.
+        </audio>
+        <div class="watches-video">
+          <iframe
+            src="https://www.youtube.com/embed/4AINfI3Xsrg"
+            title="Watches video"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <div class="stop-details">
+        <div class="stop-gallery">
+          <img class="stop-image" id="stop-image" src="stop%201_watch%20face.jpg" alt="Watch face" tabindex="0" role="button" aria-label="Enlarge watch image" />
+          <div class="gallery-dots" role="tablist" aria-label="Stop images">
+            <button type="button" role="tab" aria-label="Image 1" aria-selected="true" class="gallery-dot"></button>
+            <button type="button" role="tab" aria-label="Image 2" aria-selected="false" class="gallery-dot"></button>
+            <button type="button" role="tab" aria-label="Image 3" aria-selected="false" class="gallery-dot"></button>
+            <button type="button" role="tab" aria-label="Image 4" aria-selected="false" class="gallery-dot gallery-dot--active"></button>
+          </div>
+        </div>
+        <div class="stop-copy">
+          <div class="stop-heading">
+            <div>
+              <p class="stop-number" id="stop-number">Stop 1</p>
+              <h1 id="stop-title">Watches</h1>
+            </div>
+            <button class="play-button" id="play-button" type="button" aria-label="Play audio"><span class="play-icon" aria-hidden="true"></span></button>
+          </div>
+          <hr>
+          <h2 id="stop-section-title">Ste-Croix and the art of precision</h2>
+          <p id="stop-description">Welcome to Ste-Croix! Can you hear the ticking?<br><br>Let’s meet the humble pocket watch, the smallest objects on our display.<br><br>Our pocket watches are as small as they are complex. Creating a functional pocket watch requires controlling dozens of tiny moving parts with extraordinary precision. Misplace a single piece and you’ll never know the correct time again!<br><br>Precision metalwork didn't appear overnight. Long before Sainte-Croix became known for music boxes and automata, its people were already mastering tiny mechanical parts. Remote and high in the Jura mountains, with long winters and little other work, the town turned time, patience, and skilled hands into something valuable. Young apprentices traveled to places like Geneva to learn the craft, then brought their skills home. At first, local workshops simply supplied delicate components to larger watchmaking centers, but the knowledge stayed and spread from workshop to workshop, generation to generation.<br><br>Once a community masters movement at that scale, a watch no longer has to just tell time. In 1865, Charles Reuge opened a workshop in Sainte-Croix making musical pocket watches, combining timekeeping precision with a miniature musical mechanism. The same skills that made a watch tick could also make it sing.<br><br>By 1878, Sainte-Croix had 23 watch manufacturers producing nearly 23,000 watches a year and employing over 1,000 people, hundreds of hands working daily with screws, springs, and wheels small enough to vanish between their fingers.<br><br>Let’s visit Stop 2 to explore further!</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+      <div class="image-lightbox__backdrop" data-close-lightbox></div>
+      <div class="image-lightbox__content">
+        <h2 class="sr-only" id="lightbox-title">Enlarged object image</h2>
+        <button class="image-lightbox__close" id="close-lightbox" type="button" aria-label="Close enlarged image">×</button>
+        <img class="image-lightbox__image" id="lightbox-image" src="stop%201_watch%20face.jpg" alt="Watch face" />
+      </div>
+    </div>
+
+    <footer class="intro__footer">
+      <button class="footer-back-button" id="footer-back-button" type="button" hidden>Back</button>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
